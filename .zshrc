@@ -1,7 +1,7 @@
 #wiki  https://wiki.archlinux.org/index.php/Zsh_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9e
 #вариты шелов и их описание http://hyperpolyglot.org/unix-shells
 #vi в zsh
-bindkey -v
+#bindkey -v
 #autoload -Uz compinit promptinit 
 autoload -U compinit promptinit 
 compinit
@@ -67,7 +67,9 @@ bindkey "^[OB" down-line-or-search
 bindkey "^[OC" forward-char
 bindkey "^[OD" backward-char
 bindkey "^[OF" end-of-line
+bindkey "^E" end-of-line
 bindkey "^[OH" beginning-of-line
+bindkey "^X" beginning-of-line
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[3~" delete-char
 bindkey "^[[4~" end-of-line
@@ -75,6 +77,8 @@ bindkey "^[[5~" up-line-or-history
 bindkey "^P" up-line-or-history
 bindkey "^[[6~" down-line-or-history
 bindkey "^?" backward-delete-char
+#bindkey -M main -M viins -M vicmd   '^[[33~'    backward-kill-word
+#bindkey '^H' backward-kill-word
 #Теперь архивы можно распаковывать командой extract архив без мучительного вспоминания аргументов
 ex () {
   if [ -f $1 ] ; then
