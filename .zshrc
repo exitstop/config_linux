@@ -1,6 +1,8 @@
 #wiki  https://wiki.archlinux.org/index.php/Zsh_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9e
 #вариты шелов и их описание http://hyperpolyglot.org/unix-shells
-#vi в zsh
+OLDPWD=`pwd`
+typeset -U path
+path=(~/bin /other/things/in/path $path[@])
 #bindkey -v
 #autoload -Uz compinit promptinit 
 autoload -U compinit promptinit 
@@ -163,6 +165,9 @@ autoload run-help-svn
 autoload run-help-svk
 #unalias run-help
 alias help=run-help
+
+#Открывать вкладку в текущей дирректории 
+cd $OLDPWD
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ДОЛЖЕН БЫТЬ САМЫМ ПОСЛЕДНИМ ПЛАГИНОМ!!!!!!!!!
