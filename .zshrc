@@ -1,5 +1,5 @@
 #wiki  https://wiki.archlinux.org/index.php/Zsh_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9e
-#вариты шелов и их описание http://hyperpolyglot.org/unix-shells
+##вариты шелов и их описание http://hyperpolyglot.org/unix-shells
 OLDPWD=`pwd`
 typeset -U path
 path=(~/bin /other/things/in/path $path[@])
